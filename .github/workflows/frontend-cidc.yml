@@ -18,7 +18,7 @@ on:
 
 jobs:
   frontend_test:
-    runs-on: ubuntu-latest
+    runs-on: node:16
 
     defaults:
       run:
@@ -53,7 +53,7 @@ jobs:
 
       - name: Run Tests and Generate Code Coverage Report
         run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless --code-coverage
-
+      
       - name: Upload Code Coverage Report
         uses: actions/upload-artifact@v4
         with:
