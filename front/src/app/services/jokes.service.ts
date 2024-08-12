@@ -8,7 +8,7 @@ import { Joke } from '../model/joke.model';
 })
 export class JokesService {
 
-  private pathService = 'api/joke';
+  private pathService = 'http://localhost:8080/api/joke';
 
   private subject: BehaviorSubject<Joke | null> = new BehaviorSubject<Joke | null>(null);
 
@@ -17,6 +17,7 @@ export class JokesService {
   }
 
   public getRandomJoke(): void {
+    console.log(this.pathService)
     this.httpClient.get<Joke>(this.pathService).subscribe((joke: Joke) => this.subject.next(joke));
   }
 

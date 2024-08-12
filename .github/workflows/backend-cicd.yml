@@ -1,0 +1,35 @@
+name: CI - Backend
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  backend_test:  
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+
+      - name: Build and Test with Maven
+        run: mvn clean verify
+
+      - name: Generate JaCoCo Report
+        run: mvn jacoco:report
+
+      - name: Upload JaCoCo Report to GitHub Pages
+        uses: actions/upload-artifact@v3
+        with:
+          name: jacoco-report
+          path: target/site/jacoco
