@@ -10,7 +10,7 @@ services:
       - "80:80"
     depends_on:
       - back
-
+   
   back:
     build:
       context: ./back
@@ -18,3 +18,4 @@ services:
     image: bobapp-back
     ports:
       - "8080:8080"
+  
