@@ -302,5 +302,19 @@ La couverture des branches est un point très positif. En revanche, la couvertur
 
 ## 4. Retours utilisateurs
 
+**Commentaires**
 
+1. Un utilisateur mentionne un bug avec le bouton de suggestion de blague, mais cette fonctionnalité n'existe pas dans l'application actuelle. Il peut être effectivement intéressant d'implémenter cette fonctionnalité.
+2. Un utilisateur mentionne un bug persistant sur le post de vidéo, mais cette fonctionnalité n'existe pas. Il peut être effectivement intéressant d'implémenter cette fonctionnalité.
+3. Un utilisateur indique qu'il ne reçoit plus de réponses à ses mails.
+4. Un utilisateur, déçu de l'application, a décidé de la supprimer de ses favoris.
+
+
+**Conclusion**
+
+Il est crucial dans un premier temps de se focaliser sur les bugs existants : un bug avait été détecté dans le frontend de l'application, lequel empêchait un affichage correct des blagues. Par ailleurs, il faut s'assurer que le front puissse être utilisé avec n'importe quel navigateur. 
+
+Ensuite, la couverture des tests doit être revue pour pouvoir s'assurer une meilleure qualité/sécurité du code existant. 
+
+Enfin, il serait intéressant, une fois les deux premiers points corrigés, d'implémenter de nouvelles fonctionnalités permettant de susciter davantage l'engagement des utilisateurs. Par exemple, en implémentant une nouvelle fonctionnalité permettant aux utilisateurs de poster une blague, ou bien de poster une vidéo. 
 
