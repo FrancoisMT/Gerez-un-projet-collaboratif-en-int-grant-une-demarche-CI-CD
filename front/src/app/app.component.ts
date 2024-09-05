@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    console.log("TEST 1 : modification frontend");
+    console.log("TEST DEMO 1");
     this.getRandomJoke();
   }
 
