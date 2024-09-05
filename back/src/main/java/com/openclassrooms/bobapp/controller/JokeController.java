@@ -14,7 +14,7 @@ public class JokeController {
     private final JokeService jokeService;
 
     JokeController(JokeService jokeService) {
-        System.out.println("TEST DEMO 1");
+        System.out.println("TEST DEMO FIN");
         this.jokeService = jokeService;
     }
 
